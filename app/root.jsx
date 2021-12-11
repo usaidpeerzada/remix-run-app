@@ -40,3 +40,14 @@ export default function App() {
     </html>
   );
 }
+
+export function ErrorBoundary({ error }) {
+  return (
+    <Document title="Uh-oh!">
+      <div className="error-container">
+        <h1>App Error</h1>
+        <pre>{error.message}</pre>
+      </div>
+    </Document>
+  );
+}
